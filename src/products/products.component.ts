@@ -4,6 +4,7 @@
 import {Component} from '@angular/core';
 import {ProductsService} from './products.service';
 import {Http} from '@angular/http';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'phone-details',
@@ -19,5 +20,8 @@ export class SmartPhoneComponenet{
 
   getSmartPhoneDetails(){
    this.http.get('http://localhost:2550/getSmartPhoneDetails').subscribe();
+  }
+  GetPhoneDetails(model: FormControl){
+
   }
 }
